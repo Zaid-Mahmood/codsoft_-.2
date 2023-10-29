@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CSS -->
+    <Link href="Styles/style.css" rel="stylesheet">
+
+    <!-- JS  -->
+    <script src="js/index.js"></script>
+
+    <title>Todo App</title>
+</head>
+
+<body class="bg-dark text-white">
+    <h2 class="text-center py-5">CRUD APP With Local Storage</h2>
+
+    <div class="container text-white">
+        <form name="register"
+            onsubmit="return validateFields()">
+            <div class="row">
+
+                <div>
+                    <p class="allEmptyError text-danger d-none text-center">
+                        All Fields are required
+                    </p>
+                </div>
+                <div>
+                </div>
+
+                <div class="col-6">
+                    <label class="py-2">Name</label>
+                    <input id="name" type="name" class="form-control" placeholder="Name" />
+                    <p class="validName d-none text-danger text-center">Please Enter valid name</p>
+                </div>
+
+                <div class="col-6">
+                    <label class="py-2">Email</label>
+                    <input id="email" type="email" class="form-control" placeholder="Email" />
+                    <p class="validEmail d-none text-danger text-center">Please Enter valid Email</p>
+
+                </div>
+
+                <div class="col-6 py-4">
+                    <label class="py-2">Age</label>
+                    <input id="age" type="number" class="form-control" placeholder="Age" />
+                    <p class="validAge d-none text-danger text-center">Insert age between 01 to 100</p>
+                </div>
+
+                <div class="col-6 py-4">
+                    <label class="py-2">Address</label>
+                    <input id="address" type="name" class="form-control" placeholder="Address" />
+                    <p class="validAddress d-none text-danger text-center">Please Enter the valid address</p>
+
+                </div>
+
+
+                <div class="text-center my-4">
+                    <button id="submitBtn" class="btn btn-primary" type="submit">Submit</button>
+                    <button id="updateBtn" class="btn btn-success d-none" type="button" onclick="validateFields()">Update</button>
+
+                   
+
+                </div>
+            </div>
+        </form>
+
+
+        <hr class="mb-0">
+
+        <!-- Table -->
+
+        <table class="table table-dark table-striped-columns table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="listTable">
+
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>
